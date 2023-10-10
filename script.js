@@ -41,18 +41,20 @@ const products = [
     },
 ];
 
-
+// Formatação monetária
 const formatter = Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
     maximumFractionDigits: 2,
 })
 
+// Declaração de constantes
 const searchBtn = document.querySelector('#btnSearch');
 const listContainer = document.querySelector('.list_prod');
 const header = document.querySelector('#header');
 const search = document.querySelector('#search');
 
+// Checagem do input
 function filterProducts(search) {
     if (search != '') {
         return products.filter(product => {
@@ -63,6 +65,7 @@ function filterProducts(search) {
     }
 }
 
+// Consulta de produtos
 function searchProduct() {
     search.addEventListener('change', (e) => {
         const searched = e.target.value;
@@ -74,6 +77,7 @@ function searchProduct() {
     });
 }
 
+// Checagem se o botão é pressionado ou a tecla enter
 searchBtn.addEventListener('click', searchProduct());
 
 document.addEventListener('keypress', (e) => {
@@ -83,8 +87,10 @@ document.addEventListener('keypress', (e) => {
 
     }
 })
+// |==================================================| //
 
 
+// Renderização da tela inicial
 function renderManual() {
     let list =
         `
@@ -97,6 +103,7 @@ function renderManual() {
     listContainer.innerHTML = list;
 }
 
+//Renderização da lista de produtos
 function renderList(products) {
     let list = '';
 
@@ -164,3 +171,7 @@ function renderList(products) {
 }
 
 renderManual();
+
+// TODO: Separar funções em módulos futuramente;
+// TODO: Criar sistema de paginação;
+// TODO: Sistema de filtro;
