@@ -139,6 +139,7 @@
 }
 
 .title {
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: .375rem;
@@ -245,7 +246,16 @@
         gap: .8rem;
     }
 
+    .product-img {
+        width: 50%;
+    }
+
+    .product-info {
+        width: 50%;
+    }
+
     .title {
+        width: 100%;
         align-items: center;
         gap: 0rem;
     }
@@ -263,6 +273,10 @@
 
     .title p {
         color: #a0a0a0;
+    }
+
+    .store-info {
+        width: 100%;
     }
 
     .go-to-store {
@@ -308,8 +322,23 @@
         align-items: center;
     }
 
+    .product-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
     .product-img img {
-        width: 200px;
+        width: 70%;
+    }
+
+    .product-info {
+        width: 100%;
+    }
+
+    .title {
+        width: 100%;
     }
 
     .product-title {
