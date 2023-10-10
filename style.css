@@ -74,7 +74,7 @@
 #list {
     background-color: #e4e4e4;
     height: 100%;
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     padding: .5rem;
@@ -172,6 +172,14 @@
     text-decoration: none;
 }
 
+.store-info {
+    width: 50%;
+    gap: .5rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
 .go-to-store:hover {
     background-color: #0c58ca;
 }
@@ -191,8 +199,9 @@
     color: transparent;
     background-color: transparent;
     border: 2px solid #0b5ed7;
-    padding: .3rem;
+    padding: .2rem;
     transition: all .3s ease;
+    font-size: 20px;
 }
 
 .check_btn:hover {
@@ -203,4 +212,117 @@
     color: #e4e4e4;
     background-color: #30ddbd;
     border: 1px solid #30ddbd;
+}
+
+
+@media (max-width: 940px) {
+    #list {
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    #searchInput {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 760px) {
+    .store-info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .product-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    .title {
+        align-items: center;
+        gap: 0rem;
+    }
+
+    .product-title {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .product-price {
+        font-size: 20px;
+        margin-bottom: .3rem;
+    }
+
+    .title p {
+        color: #a0a0a0;
+    }
+
+    .go-to-store {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .input-content {
+        width: 50%;
+    }
+
+    .product-img img {
+        width: 160px;
+    }
+
+    .product-title {
+        font-size: 22px;
+        font-weight: 600;
+    }
+
+    .product-price {
+        font-size: 20px;
+        margin-bottom: .3rem;
+    }
+
+    .go-to-store {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 430px) {
+    .input-content {
+        width: 50%;
+    }
+
+    #searchInput .logo a {
+        font-size: 18px;
+    }
+
+    .product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-img img {
+        width: 200px;
+    }
+
+    .product-title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .product-price {
+        font-size: 20px;
+        margin-bottom: .3rem;
+    }
+
+    .go-to-store {
+        padding: 5px;
+    }
 }
